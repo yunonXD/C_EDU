@@ -69,15 +69,53 @@ int main(void){
 
 
     //구구단
-    for( int i =2; i<=9; i++){
+    // for( int i =2; i<=9; i++){
         
-        printf("===%d 단 계산===\n" , i);
+    //     printf("===%d 단 계산===\n" , i);
 
-        for(int j = 1; j <=9; j++){
-            printf("    %d x %d = %d\n" , i , j , i*j);
-        }
+    //     for(int j = 1; j <=9; j++){
+    //         printf("    %d x %d = %d\n" , i , j , i*j);
+    //     }
+    // }
+
+
+    /*
+    이중반복문
+    *
+    **
+    ***
+    ****
+    *****
+    */
+
+//    for( int i = 0; i < 5; i++){
+//         for(int j = 0; j <= i; j++){
+//             printf("*");
+//         }
+//         printf("\n");
+//    }
+
+   /*
+    이중반복문 거꾸로
+        *
+       **
+      ***
+     ****
+    *****
+    */
+
+
+   for(int i = 0; i < 5; i++){
+
+    for( int j = i; j < 5-1; j++){
+        printf(" ");
     }
+    for (int k = 0; k <= i; k++){
+        printf("*");
+    }
+    printf("\n");
 
+   }
 
 
     

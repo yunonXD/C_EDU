@@ -77,21 +77,78 @@ int main(void){
     // }
 
     //스위치
+    // srand(time(NULL));
+    // int i = rand() %3;
+    // switch(i){
+    //     case 0: printf("0가위\n"); break;
+
+    //     case 1: printf("1바위\n"); break;
+
+    //     case 2: printf("2보\n"); break;
+
+    //     default:    printf("몰루?\n"); break;
+
+    // }
+
+    // int age = 14;
+
+    // switch (age)
+    // {
+    // case 8:
+    // case 9:
+    // case 10:
+    // case 11:
+    // case 12:
+    // case 13: printf("초등학생입니다"); break;
+    // case 14:
+    // case 15:
+    // case 16: printf("중학생입니다"); break;
+    // case 17:
+    // case 18:
+    // case 19:printf("고등학생입니다"); break;
+    
+    // default:printf("학생이 아닙니다"); break;
+    //     break;
+    // }
+
+
+//Up and Down
+
     srand(time(NULL));
-    int i = rand() %3;
-    switch(i){
-        case 0: printf("0가위\n"); break;
+    int num = rand() % 100 +1 ;
 
-        case 1: printf("1바위\n"); break;
+    printf("숫자 : %d\n" , num);
 
-        case 2: printf("2보\n"); break;
+    int answer = 0;
+    int chance = 5;
 
-        default:    printf("몰루?\n"); break;
+    while(chance > 0){
+        printf("남은 기회 :%d\n" , chance--);
+
+        printf("숫자를 확인 : (1~100) ");
+
+        scanf("%d" , &answer);
+
+        if( answer > num){
+            printf(" DOWN \n\n");
+        }
+        else if (answer < num){
+            printf(" UP \n\n");
+        }
+        else if(answer == num){
+            printf(" u win ;)");
+            break;
+        }else{
+            printf("error");
+            break;
+        }
+
+        if( chance == 0){
+            printf(" chance is 0. u loss");
+            break;
+        }
 
     }
-
-
-
 
     return 0;
 }

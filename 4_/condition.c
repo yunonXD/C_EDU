@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<time.h>
+#include<stdlib.h>
 
 int main(void){
 
@@ -41,21 +43,52 @@ int main(void){
 
 
     //&& ||
-    int a = 10;
-    int b = 10;
-    int c = 12;
-    int d = 12;
+    // int a = 10;
+    // int b = 10;
+    // int c = 12;
+    // int d = 12;
 
-    if ( a == b && c == d){
-        printf(" a and b is equal , c and d is also equal");
+    // if ( a == b && c == d){
+    //     printf(" a and b is equal , c and d is also equal");
+    // }
+    // else {
+    //     printf("diff value.");
+    // }
+
+
+
+//가위0바위1보2
+    
+
+    // srand(time(NULL));
+    // int i = rand() %3; //0~2
+
+    // if( i == 0){
+    //     printf("가위\n");
+    // }
+    // else if( i == 1){
+    //     printf("바위\n");
+    // }
+    // else if( i == 2){
+    //     printf("보\n");
+    // }
+    // else{
+    //     printf("알수없음");
+    // }
+
+    //스위치
+    srand(time(NULL));
+    int i = rand() %3;
+    switch(i){
+        case 0: printf("0가위\n"); break;
+
+        case 1: printf("1바위\n"); break;
+
+        case 2: printf("2보\n"); break;
+
+        default:    printf("몰루?\n"); break;
+
     }
-    else {
-        printf("diff value.");
-    }
-
-
-
-
 
 
 

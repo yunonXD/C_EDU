@@ -56,11 +56,41 @@ int main(void){
     // char c = 'A';
     // printf("%c\n" , c);
 
-    char str[256];
-    scanf("%s" , str ,sizeof(str));     //sizeof(str) << 해당 문자열 크기로 입력하지 않도록 보험처리
-    printf("%s\n" , str);
+    //char str[256];
+    //scanf("%s" , str ,sizeof(str));     //sizeof(str) << 해당 문자열 크기로 입력하지 않도록 보험처리
+    //printf("%s\n" , str);
 
+    //프로젝트
+    //경찰이 범죄자의 정보를 입수 조서작성
+    //이름 나이 몸무게 키 범죄명
 
+    char name[256];
+    printf ("이름이 뭔가");
+    scanf("%s" , name, sizeof(name));
+
+    int age;
+    printf ("나이");
+    scanf("%d" , &age);
+
+    float weight;
+    printf("몸무게");
+    scanf("%f" , &weight);
+
+    double height;
+    printf("키");
+    scanf("%lf" , &height);
+
+    char what[256];
+    printf("범죄명");
+    scanf("%s" , what , sizeof(what));
+
+    //출력
+    printf("\n\n -- 범죄자 정보 -- \n\n");
+    printf(" 이름   : %s\n" , name);
+    printf(" 나이   : %d\n" , age);
+    printf(" 몸무게 : %.2f\n" , weight);
+    printf(" 키     : %.2lf\n" , height);
+    printf(" 범죄   : %s\n" , what);
 
     return 0;
 }

@@ -2,7 +2,7 @@
 
 int main(void){
 
-    //ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ì˜ˆì œ
+    //Á¤¼öÇü º¯¼ö¿¡ ´ëÇÑ ¿¹Á¦
     // int m_age = 12;
     // printf("%d \n" , m_age);
 
@@ -10,27 +10,57 @@ int main(void){
     // printf("%d \n" , m_age);
 
 
-    //ì‹¤ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€í•œ ì˜ˆì œ
+    //½Ç¼öÇü º¯¼ö¿¡ ´ëÇÑ ¿¹Á¦
     // float m_f = 45.4f;
     // printf("%.2f\n" , m_f);
 
     // double m_d = 4.425;
     // printf("%.2lf" , m_d );
 
-    //ìƒìˆ˜. ë³€í•˜ì§€ ì•ŠëŠ” ìˆ˜
+    //»ó¼ö. º¯ÇÏÁö ¾Ê´Â ¼ö
     // const int Year = 2000;
-    // printf("íƒœì–´ë‚œ ë…„ë„ : %d" , Year);
+    // printf("ÅÂ¾î³­ ³âµµ : %d" , Year);
     //Year = 2001;
 
 
     //printf
-    //ì—°ì‚°
+    //¿¬»ê
 
     // int add = 3 + 7; // 10
 
     // printf ( " 3 + 7  = %d\n" , add);
 
-    printf ("%d + %d = %d \n" , 3, 7, 3 + 7);
+    // printf ("%d + %d = %d \n" , 3, 7, 3 + 7);
     
+
+    //scanf
+    //Å°º¸µå ÀÔ·ÂÀ» ¹Ş¾Æ¼­ ÀúÀå
+
+    // int input = 0;
+    // printf ("°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+    // scanf("%d" , &input);
+
+    // printf("ÀÔ·Â°ª : %d\n" , input);
+
+
+    // int one, two, three;
+    // printf(" 3°³ÀÇ Á¤¼ö ÀÔ·Â : ");
+
+    // scanf("%d %d %d" , &one, &two , &three);
+
+    // printf("Ã¹¹øÂ° °ª : %d \n" , one);
+    // printf("µÎ¹øÂ° °ª : %d \n" , two);
+    // printf("¼¼¹øÂ° °ª : %d \n" , three);
+
+    //¹®ÀÚ(ÇÑ±ÛÀÚ) , ¹®ÀÚ¿­(ÇÑ±ÛÀÚ ÀÌ»óÀÇ ¿©·¯±ÛÀÚ)
+    // char c = 'A';
+    // printf("%c\n" , c);
+
+    char str[256];
+    scanf("%s" , str ,sizeof(str));     //sizeof(str) << ÇØ´ç ¹®ÀÚ¿­ Å©±â·Î ÀÔ·ÂÇÏÁö ¾Êµµ·Ï º¸ÇèÃ³¸®
+    printf("%s\n" , str);
+
+
+
     return 0;
 }

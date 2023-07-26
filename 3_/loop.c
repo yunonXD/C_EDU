@@ -40,11 +40,22 @@ int main(void){
     // }
 
     //while(조건) {}
+    // int i = 1;
+    // while (i <= 10)
+    // {
+    //    printf("HelloWorld %d\n" , i++);
+    // }
+
+
+    //do {} while(조건);
+
     int i = 1;
-    while (i <= 10)
-    {
-       printf("HelloWorld %d\n" , i++);
-    }
+    do{
+        printf("HelloWorld! %d\n" , i++);
+        
+    }while( i <= 10);
+
+
     
 
 

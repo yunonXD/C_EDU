@@ -137,7 +137,7 @@ int main(void){
             printf(" ");
         }
 
-        for(int k = 0; k < i * 2 + 1; k++){
+        for(int k = 0; k < i * 2 + 1; k++){     //각 층마다 이전 층의 숫자 x2 에 +1 값 만큼 증가함
             printf("*");
         }
 

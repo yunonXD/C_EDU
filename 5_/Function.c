@@ -7,7 +7,14 @@ int function_with_return();
 void funtion_without_params();
 void funtion_with_params(int num1, int num2,int num3);
 
+
 int apple(int total, int ate);  //전체 total 개에서 ate 개를 먹고 남은 수를 반환
+
+
+int add(int num, int num2);
+int sub(int num, int num2);
+int mul(int num, int num2);
+int div(int num, int num2);
 
 int main(void){
 
@@ -51,10 +58,27 @@ int main(void){
     //funtion_with_params(21,25,31);
 
     //파라미터도 받고 리턴도 보내주는 함수
-    int ret = apple(5,2);   // 5개의 사과중 2개를 먹음
+    //int ret = apple(5,2);   // 5개의 사과중 2개를 먹음
     //printf("사과 5개중에 2개를 먹으면 %d 가 나와요 " , ret);
 
-    printf("사과 %d 개 중에 %d 개를 먹으면 %d 개가 나와요." , 10, 4, apple(10,4));
+    //printf("사과 %d 개 중에 %d 개를 먹으면 %d 개가 나와요." , 10, 4, apple(10,4));
+
+
+
+    //계산기(함수)
+    int num = 2;
+    num = add(num, 3);
+    p(num);
+
+    num = sub(num, 1);
+    p(num);
+
+    num = mul(num , 3);
+    p(num);
+
+    num = div(num, 6);
+    p(num);
+
 
 
     return 0;
@@ -92,4 +116,22 @@ void funtion_with_params(int num1, int num2, int num3){
 int apple(int total, int ate){
     //printf("파라미터 + 리턴");
     return total - ate;
+}
+
+
+
+int add(int num, int num2){
+    return num + num2;
+}
+int sub(int num, int num2){
+    return num - num2;
+
+}
+int mul(int num, int num2){
+    return num * num2;
+
+}
+int div(int num, int num2){
+    return num / num2;
+
 }

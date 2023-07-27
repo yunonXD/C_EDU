@@ -17,7 +17,7 @@ int main(void){
     //±âÈ¸ 3¹ø 
     for(int i =1; i <=3; i++){
         int bottle[4] = {0,0,0,0};
-        
+
         do{
             cntShowBottle = rand() %2 + 2 ;
 

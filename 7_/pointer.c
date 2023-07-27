@@ -1,5 +1,9 @@
 #include<stdio.h>
 
+void swap(int a, int b);
+void swap_addr(int *a, int *b);
+void changeArray(int *ptr);
+
 int main(void){
 
     //포인터
@@ -77,5 +81,96 @@ int main(void){
     // printf("미션맨의 주소 : %d\n" ,&missionMan);
     // printf("스파이의 주소 : %d\n" ,&spy);
 
+    // //배열
+    // int arr[3] = {5,10,15};
+    // int *ptr = arr;
+    // for(int i = 0; i< 3; i++){
+    //     printf("배열 arr[%d] 의 값 : %d\n" ,i, arr[i]);
+    // }
+
+    // printf ("\n\n-----------------\n\n");
+
+    //     for(int i = 0; i< 3; i++){
+    //     printf("포인터 arr[%d] 의 값 : %d\n" ,i, ptr[i]);
+    // }
+    
+    // printf ("\n\n-----------------\n\n");
+
+    // ptr[0] = 100;
+    // ptr[1] = 200;
+    // ptr[2] = 300;
+    // for(int i = 0; i< 3; i++){
+    //     printf("배열 arr[%d] 의 값 : %d\n" ,i, *(arr + i));
+    // }
+
+    // printf ("\n\n-----------------\n\n");
+
+    //     for(int i = 0; i< 3; i++){
+    //     printf("포인터 arr[%d] 의 값 : %d\n" ,i, ptr[i]);
+    // }
+    // // *(arr + i ) == arr[i] 똑같은 표현
+    // // arr == arr 배열의 첫번째 값의 주소와 동일함 == &arr[0]
+
+    // printf("arr 의 값 : %d\n" , arr);
+    // printf("arr[0] 의 주소 : %d\n" , &arr[0]);
+
+    // printf ("arr 자체의 값이 가지는 주소의 실체 값 : %d\n", *arr); //*(arr +0)
+    // printf("arr[0] 의 실제 값 : %d\n" , *&arr[0]);
+
+    // //*& 별 엔퍼센트 같이 있으면? << 둘이 있으면 암것도 없는것과 다름이 없다.
+    // //& 는 주소이며 *는 주소의 값. 붙으면 상쇄된다.
+
+
+    //swap
+    // int a = 10;
+    // int b = 20;
+    // printf(" a 의 주소 : %d\n" , &a);
+    // printf(" b 의 주소 : %d\n" , &b);
+    // //a 와 b 의 값을 바꾼다
+    // printf("Swap 함수 전 => a : %d, b : %d\n" , a ,b);
+    // swap(a,b);
+    // printf("Swap 함수 후 => a : %d, b : %d\n" , a ,b);
+
+    // //값에 의한 복사 (call by value) > 값만 복사한다는 의미
+
+    // //주소값을 넘겨버리면?? 문제 없지 않을까??
+
+    // printf("주소값 전달 전 => a : %d, b : %d\n" , a ,b);
+    // swap_addr(&a,&b);
+    // printf("주소값 전달 후 => a : %d, b : %d\n" , a ,b);
+
+    //배열일때, arr2 -> 주소
+    int arr2[3] = {10,20,30};
+    //changeArray(arr2);
+    changeArray(&arr2[0]);  //<< 결과 똑같음 왜냐? 배열은 "주소임"
+    for (int i= 0; i < 3; i++){
+        printf("%d\n" , arr2[i]);
+    }
+
+    //scanf 에서 & 를 붙이는 이유를 이제 알 수 있다
+
+
     return 0;
+}
+
+void swap(int a, int b){
+
+    //printf("swap a 의 주소 : %d\n" , &a);
+    //printf("swap b 의 주소 : %d\n" , &b);
+
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+void swap_addr(int *a, int *b){
+
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    //printf("주소값 Swap 함수 후 => a : %d, b : %d\n" , *a ,*b);
+}
+
+void changeArray(int *ptr){
+    ptr[2] = 50;
 }

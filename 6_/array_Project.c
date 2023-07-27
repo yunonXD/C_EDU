@@ -22,6 +22,7 @@ int main(void){
             cntShowBottle = rand() %2 + 2 ;
 
         }while(cntShowBottle == prevCntShotBottle);
+        prevCntShotBottle = cntShowBottle;
 
         int isinclueded = 0; //보여줄 병 중에 정답 포함 여부 확인
         printf(" > %d 번째 시도 : " , i);

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "funciton_project": "c",
-        "7_": "c"
+        "7_": "c",
+        "random": "c"
     }
 }

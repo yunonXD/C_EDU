@@ -10,9 +10,9 @@ int Sosimple(int num1, int num2){
 
 int main(void){
 
-    int (*Fptr) (int, int);
+    int (*Fptr) (int, int);     //함수 포인터 선언
 
-    Fptr = Sosimple;
+    Fptr = Sosimple;        //상수의 값을 변수에 저장
 
     Fptr(3,4);
 

@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<string.h>
+#include<stdlib.h>
 
 //int atoi          //문자열 내용을 int 로 변환
 //long atol         //long 으로 변환

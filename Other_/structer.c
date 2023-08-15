@@ -14,7 +14,10 @@ struct Test{    //"자료형"의 이름 test "user defined data type"
 
 int main(int argc, char *argv[]){
 
-    Test(10,10,"yeet","yeeeet",12.4f);
+    struct Test Tes;
+
+    Tes.test = 20;
+    printf("%d\n",Tes.test);
 
 
     return 0;

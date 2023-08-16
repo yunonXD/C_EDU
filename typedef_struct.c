@@ -21,7 +21,7 @@ typedef struct  //이렇게 이름 안써도 괜찮음
     char name1[20];
     char phoneNum1[20];
     int age1;
-}Person;
+}Person1;
 
 
 int main(int argc, char *argv[]){

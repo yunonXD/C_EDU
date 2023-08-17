@@ -7,6 +7,7 @@ typedef union ubox{
 
 }Ubox;
 
+//메모리 공간의 차이 구분
 
 int main(int argc, char *argv[]){
 
@@ -17,7 +18,7 @@ int main(int argc, char *argv[]){
     ubx.meme3 = 7.15f;
     printf("%d \n", ubx.meme1);
     printf("%d \n", ubx.meme2);
-    printf("%d \n", ubx.meme3);
+    printf("%g \n", ubx.meme3);
 
     return 0;
 }

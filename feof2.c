@@ -6,20 +6,20 @@ int main(int argc, char *argv[]){
 
     FILE *src = fopen("C:\\Users\\yyg\\Documents\\C_EDU\\OpenFolder\\src.txt","rt");
     FILE *des = fopen("C:\\Users\\yyg\\Documents\\C_EDU\\OpenFolder\\src.txt","wt");
-    int ch;
+    char str[20];
 
     if(src == NULL || des == NULL){
         puts("no txt in there");
         return -1;
     }
 
-    while((ch=fgetc(src))!=EOF)
-        fputc(ch,des);
+    while(fgets(str, sizeof(str), src) != NULL)
+        fputs(str,des);
 
-        if(feof(src)!=0)
-            puts("file copy l");
-        else
-            puts("file copy fail");
+    if(feof(src)!=0)
+        puts("file copy l");
+    else
+        puts("file copy fail");
 
     fclose(src);
     fclose(des);

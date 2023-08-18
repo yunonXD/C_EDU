@@ -3,7 +3,7 @@
 int main(int argc, char *argv[]){
 
     FILE *fp = fopen("C:\\Users\\yyg\\Documents\\C_EDU\\OpenFolder\\Simple.txt" ,"wt");
-    if(fp = NULL){
+    if(fp == NULL){
         puts("file open fail.");
         return -1;
     }

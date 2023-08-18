@@ -9,17 +9,18 @@ int main(int argc, char *argv[]){
 
     //FILE *fopen(const char *filename , const char *mode);      //파일 이름 ,스트림 종류
 
-    FILE *fp = fopen("C:\\Users\\yyg\\Documents\\C_EDU\\OpenFolder\\data.txt", "wt");
+    FILE *fp = fopen("C:\\Users\\yyg\\Documents\\C_EDU\\OpenFolder\\data.txt", "rt");
     if(fp == NULL){
         puts("file open failed. ");
         return -1;
     }
-    fputc('A' , fp);
-    fputc('B' , fp);
-    fputc('C' , fp);
+
+
+    for(int i =0; i<3; i++){
+        int ch = fgetc(fp);
+        printf("%c \n", ch);
+    }
 
     fclose(fp);
-
-
     return 0;
 }

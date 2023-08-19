@@ -16,17 +16,21 @@ int main(int argc, char *argv[]){
     while(1){
 
         readCnt = fread((void*)buf, 1, sizeof(buf),src);
-        if(readCnt<sizeof(buf) && (feof(src)!=0)){
-            fwrite((void*)buf, 1,readCnt,des);
-            puts("copt complete,");
+        if(readCnt<sizeof(buf)){
+            if( (feof(src)!=0) ){
+                fwrite((void*)buf, 1,readCnt,des);
+                puts("copt complete,");
+                break;
+            }
+            else{
+                puts("file copy fail");
+            }
+               
             break;
         }
-        else{
-            puts("file copy fail");
-        }
-        break;
+
+        fwrite((void*)buf ,1 , sizeof(buf),des);
     }
-    fwrite((void*)buf ,1 , sizeof(buf),des);
 
     fclose(src);
     fclose(des);

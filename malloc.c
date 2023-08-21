@@ -6,6 +6,9 @@
 
 //malloc 함수는 성공할 시 메모리 주소값을 return, 실패할 시 NULL return
 
+//==running time==
+//동적 할당 : 컴파일 시 할당에 필요한 메모리 공간이 계산되지 않고 실행 시 필요한 메모리 공간이 계산
+
 int main(int argc, char*argv[]){
 
     void *ptr1 = malloc(4);

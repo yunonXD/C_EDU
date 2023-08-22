@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+#define PI 3.14
+#define PRODUCT(x,y)    ((x)*(y))
+#define CIRCLE_AREA(R)  (PRODUCT((R),(R))*PI)
+
+int main(int argc, char *argv[]){
+
+    double rad = 2.1;
+    printf(" 반지름 %g 인 원의 넓이 : %g \n" , rad, CIRCLE_AREA(rad));
+
+    return 0;
+}
+
+//매크로 함수 장점
+//  매크로 함수는 일반 함수에 대해 실행 속도가 빠름
+//  자료형에 따라서 별도로 함수를 정의하지 않아도 괜찮음
+
+//매크로 함수 단점
+//  정의하기 까다롭다
+//  디버깅이 어렵다
+
+//함수매크로 조건
+//  작은 크기의 함수(한줄짜리 권장)
+//  호출 빈도가 높은 함수

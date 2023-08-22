@@ -5,6 +5,8 @@
 #define SQUARE(X) X*X       // 함수 매크로                         Function like macro
 #define SQUARE2(X) ((X)*(X))    //함수 매크로 문제 생성을 미리 방지
 
+#define Test 12\  //매크로 줄바꿈 하는 방법 역슬레시 "\"
+
 #define NAME                "Yeet"
 #define AGE                 24
 #define PRINT_ADDR          puts("adress: tyeeee \n");

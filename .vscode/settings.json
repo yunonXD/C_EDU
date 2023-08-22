@@ -3,7 +3,8 @@
     "funciton_project": "c",
     "7_": "c",
     "random": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "preloaded_macro": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

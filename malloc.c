@@ -21,7 +21,7 @@ int main(int argc, char*argv[]){
 
 
     int *ptr7 = (int*)malloc(sizeof(int));  //보통 이렇게 씀
-    int *ptr8 = (double*)malloc(sizeof(double));
+    double *ptr8 = (double*)malloc(sizeof(double));
 
 
 

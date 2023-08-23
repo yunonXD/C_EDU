@@ -13,17 +13,16 @@ int BSearch(int arr[],int len, int target){
 
     while(first <= last){
         mid = (first + last)/2;             //탐색 대상의 중앙 search
-        if(target == arr[mid])
-            return mid;                     //중앙이 타겟이면 리턴
-        else{                               //반가르기 시작
-
+        if(target == arr[mid])              //비교 연산자 = 핵심 연산자 (시간복잡도확인)
+            return mid;
+        else{                               //본격적으로 반가르기 시작
             if(target<arr[mid])
                 last = mid -1;
             else
                 first = mid +1;
         }
     }
-    return -1;      //못찾음
+    return -1;      //target 못찾음
 }
 
 int main(int argc, char *argv[]){
@@ -79,6 +78,26 @@ arr[0] ==arr[1]== arr[2] arr[3]
 
 
 
+이잔탐색 알고리즘의 최악의 경우 시간 복잡도1
+-----------
+    시간 복잡도를 계산하기 위한 핵심 연산이라고 하면? >> "==" 연산자
+    즉 == 연산자의 연산 횟수를 파악하면 대략적인 시간 복잡도를 결정 가능
+
+    데이터 수가 n 개 일때 비교 연산의 횟수? 언제까지는 표현할 수 있지만 "몇변?" 인지는 표현 불가능?
+
+    > 비교 연산 횟수의 예
+        - 8이 1이 될때까지 2로 나눈 횟수 3회, 따라서 비교연산은 3번
+        - 데이터가 1개 남았을 때, 이때 마지막으로 비교연산 1회 진행
+
+    > 비교 연산 횟수의 일반화
+        - n 이 1 될때까지 2로 나눈 횟수 k 회, 따라서 비교연산 k 번
+        - 데이터가 1개 남았을 때, 마지막 비교연산 1회 진행
+
+    > 비교 연산 횟수 결론
+        - 최악의 case 시간 복잡도 T(n) = k+1 
+        - log2 n + 1
+        - 즉 시간 복잡도는 log2n
+    
 
 
 

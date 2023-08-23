@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+int SequentialSearch(int arr[], int len, int target);
 //순차 탐색 알고리즘 적용
 int LSearch(int ar[], int len, int target){
     for(int i = 0; i < len; i++){
@@ -12,9 +12,20 @@ int LSearch(int ar[], int len, int target){
 
 int main(int argc, char *argv[]){
 
+  int arr[5] = {1,2,3,4,5};
 
+  printf("%d",SequentialSearch(arr , sizeof(arr) , 3));
 
     return 0;
+}
+
+
+int SequentialSearch(int arr[], int len, int target){
+  for(int i = 0; i < len; i++){
+      if(arr[i] == target)
+        return i;
+  }
+  return -1;
 }
 
 

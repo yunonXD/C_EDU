@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int Hanoi(int num, char from , char by , char to){
-    if(num == 1)    printf("원반 1을 %c 로 이동 \n", from, to);
+    if(num == 1)    printf("원반 1을 %c 에서 %c 로 이동 \n",from, to);
     else{
         Hanoi(num-1 , from, to , by);
         printf("원반 %d을 %c 에서 %c 로 이동 \n" , num, from, to);

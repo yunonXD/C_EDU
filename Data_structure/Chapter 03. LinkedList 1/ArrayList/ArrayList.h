@@ -1,18 +1,18 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
-#define TRUE	1
+#define TRUE	1			
 #define FALSE	0
 
 /*** ArrayList의 정의 ****/
 #define LIST_LEN	100
 typedef int LData;
 
-typedef struct __ArrayList
-{
-	LData arr[LIST_LEN];
-	int numOfData;
-	int curPosition;
+typedef struct __ArrayList{
+
+	LData arr[LIST_LEN]; //리스트 저장소 배열
+	int numOfData;		//저장된 데이터 수
+	int curPosition;	//데이터 참조 위치 기록
 } ArrayList;
 
 

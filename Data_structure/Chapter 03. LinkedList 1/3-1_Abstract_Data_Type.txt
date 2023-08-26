@@ -1,0 +1,67 @@
+추상 자료형 : Abstract Data Type ADT
+
+
+추상 자료형(ADT)의 이해
+----------------------
+ > 구체적인 기능의 완성과정을 언급하지 않고, 순수하게 기능이 무엇인지를 나열한것
+ > 자료형은 기능이다
+ > 예시 : 지갑의 추상 자료형 : 카드의 삽입 -> 카드의 추출 -> 동전의 삽입 -> 동전의 추출 -> 지폐의 삽입 ..
+ > 위의 예시처럼 결론말 말하는것
+ > 즉 사용 설명서를 의미함.
+
+
+ 지갑을 의미하는 구조체 Wallet 의 정의
+ ----------------------
+typedef struct _wallet{
+    int coin100Num;
+    int bill5000Num;
+}Wallet;
+
+완전한 자료형의 정의로 인식되기 위해서는 해당 자료형과 관련이 있는 연산이 함께 정의되어있어야 함
+
+코드를 짜는 법?
+ - 구조체를 작성하고 그 구조체를 이용하는 함수를 작성
+ 예시
+
+    typedef struct _wallet{ //구조체 작성
+        int coin100Num;
+        int bill5000Num;
+    }Wallet;
+
+
+    int TakeOutMoney(Wallet *pw, int coinNum , int billNum);
+    int PutMoney(Wallet *pw, int conNum, int billNum);
+
+    이러한 형태가 완전한 자료형
+    마치 원래 + - * 같은 자료형을 사용하듯이 사용하면 그냥 작동하도록 만들어야함.
+    즉 구조체 변수를 사용할 때 다른 자료형을 사용할때처럼 - * + 같은것 조차 필요없이 만들어야함.
+    미리 다 만들어둔다!!!
+
+
+구조체 wallet의 추상 자료형을 정의하면?
+    
+    int main(int argc, char *argv[]){
+
+        Wallet myWallat;
+        ...
+        PutMoney(*myWallatm ,5 10);     돈을 넣었다
+        ...
+        ret = TakeOutMoney(&myWallat,2,5);  //돈을 꺼낸다
+        ...
+    }
+
+    ==Wallet 의 ADT== ,,사용 설명서
+    int TakeOutMoney(Wallet *pw, int coinNum , int billNum);
+        - 첫 번째 인자로 전달된 주소의 지갑에서 돈을 꺼냄
+        - 두 번째 인자로 꺼낼 동전의 수, 세번째 인자로 꺼낼 지폐의 수를 전달
+        - 꺼내고자 하는 돈의 총액 리턴 그리고 그만큼 자금을 차감
+    int PutMoney(Wallet *pw, int conNum, int billNum);
+        - 첫번째 인자로 전달된 주소의 지갑에 돈을 넣음
+        - 두 번째 인자로 넣을 동전의 수, 세번째 인자로 넣을 지폐의 수를 전달
+        - 넣은 만큼 동전, 지폐의 수가 증가
+
+
+
+
+
+

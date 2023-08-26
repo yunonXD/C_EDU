@@ -5,7 +5,8 @@
     "random": "c",
     "stdio.h": "c",
     "preloaded_macro": "c",
-    "roundarith.h": "c"
+    "roundarith.h": "c",
+    "point.h": "c"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

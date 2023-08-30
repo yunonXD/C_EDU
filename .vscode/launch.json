@@ -1,7 +1,6 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -9,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/yyg/Documents/C_EDU/Class",
-      "program": "c:/Users/yyg/Documents/C_EDU/Class/build/Debug/outDebug",
+      "cwd": "c:/Users/yyg/Documents/C_EDU/Data_structure/Chapter 05. LinkedList 3/DoubLinkedList",
+      "program": "c:/Users/yyg/Documents/C_EDU/Data_structure/Chapter 05. LinkedList 3/DoubLinkedList/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

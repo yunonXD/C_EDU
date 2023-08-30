@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include"CLinkedList.h"
 
 
@@ -63,7 +64,7 @@ int LNext(List *plist, Data *pdata){
         return FALSE;
     
     plist->before = plist->cur;
-    plist->cur->next = plist->cur;
+    plist->cur = plist->cur->next;
 
     *pdata = plist->cur->data;
     return TRUE;

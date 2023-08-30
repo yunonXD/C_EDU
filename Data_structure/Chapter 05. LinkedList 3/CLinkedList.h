@@ -1,5 +1,7 @@
 #ifndef __CIRCLE_LINKED_LIST__
 #define __CIRCLE_LINKED_LIST__
+#define TRUE 1
+#define FALSE 0
 
 typedef int Data;
 
@@ -21,7 +23,7 @@ void ListInit(List *plist);
 void LInsert(List *plist, Data data);
 void LInsertFront(List *plist, Data data);
 
-int LFirst(List *plist, Data pdata);
+int LFirst(List *plist, Data *pdata);
 int LNext(List *plist, Data *pdata);
 Data LRemove(List *plist);
 int LCount(List *plist);

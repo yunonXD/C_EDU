@@ -1,0 +1,35 @@
+
+스택Stack
+
+스택의 이해와 ADT 정의
+---------------------
+ - 스택은 선입후출 자료구조로 초코볼이 들어있는 통에 비유할 수 있음
+ - LIFO (Last-In , First Out) 구조
+
+ Push - Pop - Peek 스택 기본 연산
+
+  - push -> 삽입
+  - Pop -> 추출+삭제
+  - Peek -> 추출 but 삭제는 안함 (단순확인)
+
+  
+void StackInit(Stack *pstack);
+    - 스택의 초기화
+    - 스택 생성후 가장 먼저 호출
+
+int SIsEmpty(Stack *pstack);
+    - 스택이 비어있는 경우 TRUE(1) 아닐경우 FALSE(0)
+
+void SPush(Stack *pstack , Data data);
+    - 스택에 데이터를 저장, 매개변수 data 로 전달된 값을 저장
+
+Data SPop(Stack *pstack);
+    - 마지막에 저장된 요소를 삭제
+    - 삭제된 데이터는 return
+    - 본 함수의 호출을 위해서 데이터가 
+        하나 이상이 존재함을 보장해야함
+
+Data SPeek(Stack *pstack);
+    - 마지막 저장된 요소를 리턴하되 삭제는 안함
+    - 본 함수의 호출을 위해서 데이터가 
+        하나 이상이 존재함을 보장해야함

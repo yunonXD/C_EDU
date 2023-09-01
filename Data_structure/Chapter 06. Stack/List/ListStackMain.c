@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"Stack.h"
+#include"ListStack.h"
 
 int main(int argc, char *argv[]){
 

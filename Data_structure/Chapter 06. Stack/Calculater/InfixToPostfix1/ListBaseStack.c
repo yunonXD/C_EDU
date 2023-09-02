@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include "ListBaseStack.h"
 
-void StackInit(Stack * pstack)
-{
+void StackInit(Stack * pstack){
+
 	pstack->head = NULL;
 }
 
-int SIsEmpty(Stack * pstack)
-{
+int SIsEmpty(Stack * pstack){
+
 	if(pstack->head == NULL)
 		return TRUE;
 	else
 		return FALSE;
 }
 
-void SPush(Stack * pstack, Data data)
-{
+void SPush(Stack * pstack, Data data){
+
 	Node * newNode = (Node*)malloc(sizeof(Node));
 
 	newNode->data = data;
@@ -25,8 +25,8 @@ void SPush(Stack * pstack, Data data)
 	pstack->head = newNode;
 }
 
-Data SPop(Stack * pstack)
-{
+Data SPop(Stack * pstack){
+
 	Data rdata;
 	Node * rnode;
 
@@ -45,10 +45,10 @@ Data SPop(Stack * pstack)
 	return rdata;
 }
 
-Data SPeek(Stack * pstack)
-{
-	if(SIsEmpty(pstack))
-	{
+Data SPeek(Stack * pstack){
+
+	if(SIsEmpty(pstack)){
+		
 		printf("Stack Memory Error!");
 		exit(-1);
 	}

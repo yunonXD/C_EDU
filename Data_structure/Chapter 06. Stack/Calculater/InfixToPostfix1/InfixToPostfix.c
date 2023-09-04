@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "ListBaseStack.h"
+#include "InfixToPostfix.h"
 //후위 표기법 수식으로 변환하는 과정
 
 int GetOpPrec(char op){
@@ -49,7 +50,7 @@ void ConvToRPNExp(char exp[]){			//중위 to 후위 변환식
 
 	for(i=0; i<expLen; i++){
 		tok = exp[i];
-		if(isdigit(tok))	convExp[idx++] = tok;	//tok 에 저장된 값이 피연산자라며
+		if(isdigit(tok))	convExp[idx++] = tok;	//tok 에 저장된 값이 피연산자라면
 		else{					//연산자라면	
 			switch(tok){
 

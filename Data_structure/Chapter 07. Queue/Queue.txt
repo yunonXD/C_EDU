@@ -1,0 +1,25 @@
+
+큐 (Queue) (Stack)
+
+줄서기의 형태를 큐로 많이 본다.
+큐는 FIFO 선입선출 구조의 자료구조. (Stack 은 FILO 선입후출)
+
+    - 큐에 데이터를 넣는 연산   enqueue
+    - 큐에 데이터를 꺼내는 연산 dequeue
+
+Queue ADT
+    - void QueueInit(Queue *pq);
+        - 큐 초기화
+    - int QIsEmpty(Queue *pq);
+        - 비어있는지 확인 1 0
+    - void Enqueue(Queue *pq, Data data)
+        - 데이터 저장 (data 매개변수 저장)
+    - Data Dequeue(Queue *pq)
+        - 저장 순서가 가장 앞선 데이터 삭제
+        - 삭제 데이터 리턴
+        - 하나 이상의 데이터가 존재함이 보장되어야 호출
+    - Data QPeek(Queue *pq);
+        - 저장 순서 가장 앞선 데이터 반환, But 삭제는 안함
+        - 하나 이상의 데이터가 존재함이 보장되어야 호출
+
+    

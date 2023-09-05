@@ -7,6 +7,12 @@
     - 큐에 데이터를 넣는 연산   enqueue
     - 큐에 데이터를 꺼내는 연산 dequeue
 
+    큐의 모양
+    --------
+  ->         ->
+    --------
+앞 혹은 뒤      앞 혹은 뒤
+
 Queue ADT
     - void QueueInit(Queue *pq);
         - 큐 초기화

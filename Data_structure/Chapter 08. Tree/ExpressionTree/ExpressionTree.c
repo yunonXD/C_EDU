@@ -28,16 +28,15 @@ BTreeNode *MakeExpTree(char exp[]){
 }
 
 int EvaluateExpTree(BTreeNode * bt){
-	int op1, op2;
 
 	if(GetLeftSubTree(bt)==NULL && GetRightSubTree(bt)==NULL)
 		return GetData(bt);
 
-	op1 = EvaluateExpTree(GetLeftSubTree(bt));
-	op2 = EvaluateExpTree(GetRightSubTree(bt));
+	int op1 = EvaluateExpTree(GetLeftSubTree(bt));			//첫번째 피연산자 (서브트리 계산을 위한 재귀)
+	int op2 = EvaluateExpTree(GetRightSubTree(bt));			//두번째 피연산자
 
-	switch(GetData(bt))
-	{
+	switch(GetData(bt)){
+
 	case '+':
 		return op1+op2;
 	case '-':
@@ -47,7 +46,6 @@ int EvaluateExpTree(BTreeNode * bt){
 	case '/':
 		return op1/op2;
 	}
-
 	return 0;
 }
 

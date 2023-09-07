@@ -26,6 +26,8 @@ BTreeNode * GetRightSubTree(BTreeNode * bt){
 	return bt->right;
 }
 
+
+
 void MakeLeftSubTree(BTreeNode * main, BTreeNode * sub){
 	if(main->left != NULL)
 		free(main->left);

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "BinarySearchTree.h"
 
-int main(void)
-{
+int main(void){
+	
 	BTreeNode * bstRoot;
 	BTreeNode * sNode;    // search node
 

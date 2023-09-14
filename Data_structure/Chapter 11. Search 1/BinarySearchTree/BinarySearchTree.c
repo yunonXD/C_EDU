@@ -2,25 +2,22 @@
 #include "BinaryTree2.h"
 #include "BinarySearchTree.h"
 
-void BSTMakeAndInit(BTreeNode ** pRoot)
-{
+void BSTMakeAndInit(BTreeNode ** pRoot){
 	*pRoot = NULL;
 }
 
-BSTData BSTGetNodeData(BTreeNode * bst)
-{
+BSTData BSTGetNodeData(BTreeNode * bst){
 	return GetData(bst);
 }
 
-void BSTInsert(BTreeNode ** pRoot, BSTData data)
-{
+void BSTInsert(BTreeNode ** pRoot, BSTData data){
 	BTreeNode * pNode = NULL;    // parent node
 	BTreeNode * cNode = *pRoot;    // current node
 	BTreeNode * nNode = NULL;    // new node
 
 	// 새로운 노드가 추가될 위치를 찾는다.
-	while(cNode != NULL)
-	{
+	while(cNode != NULL){
+		
 		if(data == GetData(cNode))
 			return;    // 키의 중복을 허용하지 않음
 
@@ -37,26 +34,24 @@ void BSTInsert(BTreeNode ** pRoot, BSTData data)
 	SetData(nNode, data);    // 새 노드에 데이터 저장
 
 	// pNode의 서브 노드에 새 노드를 추가
-	if(pNode != NULL)    // 새 노드가 루트 노드가 아니라면,
-	{
+	if(pNode != NULL){
+		
+	// 새 노드가 루트 노드가 아니라면,
 		if(data < GetData(pNode))
 			MakeLeftSubTree(pNode, nNode);
 		else
 			MakeRightSubTree(pNode, nNode);
 	}
 	else    // 새 노드가 루트 노드라면,
-	{
 		*pRoot = nNode;
-	}
 }
 
-BTreeNode * BSTSearch(BTreeNode * bst, BSTData target)
-{
+BTreeNode * BSTSearch(BTreeNode * bst, BSTData target){
+
 	BTreeNode * cNode = bst;    // current node
 	BSTData cd;    // current data
 
-	while(cNode != NULL)
-	{
+	while(cNode != NULL){
 		cd = GetData(cNode);
 
 		if(target == cd)

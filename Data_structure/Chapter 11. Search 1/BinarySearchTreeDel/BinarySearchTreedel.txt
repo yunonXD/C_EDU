@@ -1,0 +1,81 @@
+-----------------------------------------
+이진 탐색 트리 -삭제
+-----------------------------------------
+
+삭제한 빈자리를 어떻게 채워야 할까?
+
+상황1
+    - 삭제할 노드가 단말 노드인 경우
+상황2
+    - 삭제할 노드가 하나의 자식 노드를 (하나의 서브트리를 가지는) 갖는 경우
+상황3
+    - 삭제할 노드가 두 개의 자식 노드를(두개의 서브트리를 가지는) 갖는 경우
+
+
+-----------------------------------------
+이진 탐색 트리 - 상황 1
+-----------------------------------------
+
+if(삭제할 노드가 단말 노드라면?){
+
+    if(GetLeftSubTree(pNode) ==dNode)
+        RemoveLeftSubTree(pNode);
+    else
+        RemoveRightSubTree(pNode);
+}
+
+
+-----------------------------------------
+이진 탐색 트리 - 상황 2
+-----------------------------------------
+
+if(삭제할 노드가 하나의 자식 노드를 지닐경우){
+
+    BTreeNode *dcNode;
+
+    //자식 노드 백업
+    if(GetLeftSubTree(dNode) !=NULL)
+        dcNode =GetLeftSubTree(dNode);
+    else
+        dcNode =GetRightSubTree(dNode);
+
+    //삭제 대상의 부모노드와 자식노드를 연결
+    if(GetLeftSubTree(pNode) == dNode)
+        ChangeLeftSubTree(pNode, dcNode);
+    else
+        ChangeRightSubTree(pNode, dcNode);
+}
+
+
+-----------------------------------------
+이진 탐색 트리 - 상황 3
+-----------------------------------------
+
+부모 노드가 이동하면 해당 위치를 대체 할 노드를 찾아서 연결
+앞에처럼 삭제가 아닌 대입 후 new 연결.
+(정말 노드를 끊어버리진 않는다)
+
+if(삭제할 노드가 두 개의 자식 노드를 지닌다면){
+
+    BTreeNode *mNode = GetRightSubTree(dNode);      대체 노드
+    BTreeNode *mpNode = dNode;                      대체 노드의 부모 노드
+
+    단계1. 삭제 대상의 대체 노드 찾기
+    while(GetLeftSubTree(mNode) !=NULL){
+        mpNode =mNode;
+        mNode =GetLeftSubTree(mNode);
+    }
+
+    단계2. 대체할 노드에 저장된 값을 삭제할 노드에 대입
+    SetData(dNode, GetData(mNode));
+
+    단계3. 대체할 노드의 부모 노드와 자식 노드를 연결
+    if(GetLeftSubTree(mpNode) == mNode)
+        대체할 노드의 자식 노드를 부모 노드의 왼쪽에 연결
+        ChangeLeftSubTree(mpNode,GetRightSubTree(mNode));
+
+    else
+        대체할 노드의 자식 노드를 부모 노드의 오른쪽에 연결
+        ChangeRightSubTree(mpNode, GetRightSubTree(mNode));
+    ...
+}

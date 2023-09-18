@@ -13,23 +13,19 @@ BSTData BSTGetNodeData(BTreeNode * bst){
 }
 
 void BSTInsert(BTreeNode ** pRoot, BSTData data){
-	if (*pRoot == NULL)
-	{
+	if (*pRoot == NULL){
 		*pRoot = MakeBTreeNode();
 		SetData(*pRoot, data);
 	}
-	else if (data < GetData(*pRoot))
-	{
+	else if (data < GetData(*pRoot)){
 		BSTInsert(&((*pRoot)->left), data);
 		*pRoot = Rebalance(pRoot);
 	}
-	else if (data > GetData(*pRoot))
-	{
+	else if (data > GetData(*pRoot)){
 		BSTInsert(&((*pRoot)->right), data);
 		*pRoot = Rebalance(pRoot);
 	}
-	else
-	{
+	else{
 		return NULL; // 키의 중복을 허용하지 않는다.
 	}
 	return *pRoot;
@@ -39,8 +35,7 @@ BTreeNode * BSTSearch(BTreeNode * bst, BSTData target){
 	BTreeNode * cNode = bst;    // current node
 	BSTData cd;    // current data
 
-	while(cNode != NULL)
-	{
+	while(cNode != NULL){
 		cd = GetData(cNode);
 
 		if(target == cd)

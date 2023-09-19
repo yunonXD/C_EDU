@@ -3,13 +3,13 @@
 #include "Person.h"
 #include "Table.h"
 
-int MyHashFunc(int k)
-{
+int MyHashFunc(int k){
+
 	return k % 100;    // 키를 부분적으로만 사용한 별로 좋지 않은 해쉬의 예!!!
 }
 
-int main(void)
-{
+int main(void){
+    
 	Table myTbl;
 	Person * np;
 	Person * sp;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(int argc, char atgv[]){
+int main(int argc, char *atgv[]){
 
     
 

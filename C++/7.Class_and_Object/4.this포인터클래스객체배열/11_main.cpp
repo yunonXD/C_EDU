@@ -2,14 +2,17 @@
 
 int main(int argc, char *argv[]){
 
-    Stock s1("A" ,10 ,1000);
-    Stock s2("B" ,20 ,1200);
+    Stock s[4] = {
+        Stock("A" ,10 ,1000),
+        Stock("B" ,20 ,1200),
+        Stock("C" ,30 ,1300),
+        Stock("D" ,40 ,1400),
+    };
 
-    s1.show();
-    s2.show();
+    Stock *first = &s[0];
+    for (int i=1; i<sizeof(s)/sizeof(Stock); i++)
+        first = &first->topval(s[i]);
 
-    cout << "A and B more big size boi is \n";
-    s1.topval(s2).show();
-
+    first->show();
     return 0;   
 }

@@ -21,7 +21,7 @@ void Stock::show() {
 	cout << "주식 총 가치 : " << total_val << endl;
 }
 
-Stock Stock::topval(Stock &s){
+Stock &Stock::topval(Stock &s){
     if(s.share_val > share_val)
         return s;
     else    return *this;

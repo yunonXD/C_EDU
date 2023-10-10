@@ -1,4 +1,4 @@
-#include"12_time.h"
+#include"13_time.h"
 
 Time::Time(){
     hours = mins = 0;
@@ -35,6 +35,15 @@ Time Time::operator+(Time &t){
     sum.hours += sum.mins/60;
     sum.mins %= 60;
     return sum;
+}
+
+Time Time::operator*(int n){
+    Time result;
+
+    long resultMin =hours *n *60 +mins *n;
+    result.hours =resultMin/60;
+    result.mins =resultMin%60;
+    return result;
 }
 
 void Time::show(){

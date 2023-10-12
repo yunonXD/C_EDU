@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/C/C++/TestPart/0_Ready/2_디버깅",
-      "program": "c:/C/C++/TestPart/0_Ready/2_디버깅/build/Debug/outDebug",
+      "cwd": "c:/C/C++/TestPart/1_DataStructure/1_배열과 리스트, 벡터",
+      "program": "c:/C/C++/TestPart/1_DataStructure/1_배열과 리스트, 벡터/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
